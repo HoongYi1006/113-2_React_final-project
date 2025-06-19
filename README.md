@@ -41,7 +41,7 @@ A modern Finance & Calendar Management System built with React + TypeScript + An
 - **React Router DOM 7.6.0** - 路由管理
 - **dayjs 1.11.13** - 日期處理
 - **Recharts 2.15.3** - 圖表繪製
-- **FullCalendar 6.1.17** - 行事曆組件
+
 
 ### 架構設計
 - **組件化架構** - 頁面、佈局、業務組件分離
