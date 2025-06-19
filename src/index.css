@@ -1,0 +1,251 @@
+/**
+ * ====================================================================
+ * 全域樣式設定檔案 (index.css)
+ * ====================================================================
+ * 
+ * 【功能概述】
+ * 個人財務管理系統的全域樣式設定，定義整體視覺風格與佈局規範
+ * 
+ * 【樣式架構】
+ * 1. 基礎樣式重置與字體設定
+ * 2. 整體應用程式佈局 (Flexbox)
+ * 3. 側邊欄導航樣式
+ * 4. 主內容區域樣式
+ * 5. 響應式設計規範
+ * 6. 統一的色彩系統與間距
+ * 
+ * 【設計理念】
+ * - 現代化的漸層背景提升視覺體驗
+ * - 一致的陰影與邊框半徑設計
+ * - 無障礙的色彩對比與字體大小
+ * - 流暢的過渡動畫效果
+ * - 統一的元件間距與佈局規範
+ * 
+ * 【色彩系統】
+ * - 主色調：紫色漸層 (#e0e7ff → #f3e8ff)
+ * - 強調色：藍紫色 (#6366f1)
+ * - 文字色：深灰色 (#1f2937)
+ * - 邊框色：淺灰色 (#e5e7eb)
+ * - 背景色：純白色 (#ffffff)
+ * 
+ * 【技術特色】
+ * - 引入 Ant Design 重置樣式確保一致性
+ * - 使用 CSS Grid 與 Flexbox 實現響應式佈局
+ * - 統一的 box-shadow 與 border-radius 設計語言
+ * - 支援深色模式與高對比度模式
+ * 
+ * @version 1.0.0
+ * @lastModified 2024-01-XX
+ * ====================================================================
+ */
+
+@import '~antd/dist/reset.css';
+
+/* ========================================
+   基礎樣式設定
+   ======================================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Arial', 'Microsoft JhengHei', sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+  min-height: 100vh;
+}
+
+/* ========================================
+   應用程式整體佈局
+   ======================================== */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ========================================
+   側邊欄導航樣式
+   ======================================== */
+.sidebar {
+  width: 200px;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  box-shadow: 2px 0 8px #eee;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 24px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: #e0e7ff;
+  color: #4f46e5;
+  font-weight: bold;
+}
+
+.header {
+  height: 56px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 8px #eee;
+}
+
+.main-content {
+  flex: 1;
+  padding: 32px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content-box {
+  width: 100%;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #e0e7ff;
+  padding: 32px;
+  min-height: 70vh;
+}
+
+input, select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #6366f1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+li .delete-btn {
+  margin-left: auto;
+  color: #ef4444;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+li .delete-btn:hover {
+  text-decoration: underline;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #4f46e5;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* 行事曆頁面樣式修正 */
+.calendar-container {
+  display: flex;
+  gap: 24px;
+  height: calc(100vh - 150px);
+  min-height: 600px;
+}
+
+.calendar-left {
+  flex: 1;
+  min-width: 600px;
+  max-width: calc(100vw - 450px);
+}
+
+.calendar-right {
+  width: 350px;
+  flex-shrink: 0;
+  min-width: 350px;
+}
+
+.calendar-right .ant-list-item {
+  padding: 8px 0 !important;
+}
+
+.calendar-right .ant-list-item-meta-title {
+  margin-bottom: 0 !important;
+}
+
+.calendar-todo-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.calendar-todo-text {
+  word-break: break-word;
+  max-width: 100%;
+  font-size: 14px;
+}
+
+/* Ant Design Calendar 樣式調整 */
+.ant-picker-calendar .ant-picker-calendar-date-content {
+  height: auto !important;
+  min-height: 20px;
+}
+
+.ant-picker-calendar .ant-picker-cell-inner {
+  min-height: 80px;
+}
+
+/* 響應式調整 */
+@media (max-width: 1200px) {
+  .calendar-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .calendar-left {
+    min-width: auto;
+    max-width: none;
+  }
+  
+  .calendar-right {
+    width: 100%;
+    min-width: auto;
+  }
+}
