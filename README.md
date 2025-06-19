@@ -67,27 +67,6 @@ src/
 └── index.tsx          # 應用程式入口點
 ```
 
-## 🚀 快速開始
-
-### 安裝依賴
-```bash
-npm install
-```
-
-### 啟動開發服務器
-```bash
-npm start
-```
-
-### 建置生產版本
-```bash
-npm run build
-```
-
-### 執行測試
-```bash
-npm test
-```
 
 ## 💡 使用說明
 
@@ -112,19 +91,6 @@ npm test
 **HoongYi1006**
 - GitHub: [@HoongYi1006](https://github.com/HoongYi1006)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
