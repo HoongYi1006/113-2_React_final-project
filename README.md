@@ -21,7 +21,6 @@ A modern Finance & Calendar Management System built with React + TypeScript + An
 - 時間提醒功能
 
 ### 📅 行事曆整合
-- FullCalendar 行事曆展示
 - 待辦事項視覺化
 - 日期點擊快速新增
 - 優先級顏色標示
